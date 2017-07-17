@@ -13,33 +13,27 @@ describe('prices', () => {
 
   describe('simpleAddition', () => {
 
-    const priceList = {
-      apple: 25,
-      orange: 30,
-      banana: 15
-    }
-
     it('adds items of the same type, given a price list', () => {
-      prices.simpleAddition(priceList, 'apple', basket).should.equal(25)
-      prices.simpleAddition(priceList, 'orange', basket).should.equal(30)
-      prices.simpleAddition(priceList, 'banana', basket).should.equal(30)
+      prices.simpleAddition('apple', basket).should.equal(25)
+      prices.simpleAddition('orange', basket).should.equal(30)
+      prices.simpleAddition('banana', basket).should.equal(30)
     })
 
     it('gives 0 if there are no items of the given type', () => {
-      prices.simpleAddition(priceList, 'mango', basket).should.equal(0)
+      prices.simpleAddition('mango', basket).should.equal(0)
     })
 
   })
 
   describe('threeForTwoAddition', () => {
 
-    const priceList = {
-      papaya: 50
-    }
-
     it('adds items of the same type, applying a 3x2 discount', () => {
-      prices.threeForTwoAddition(priceList, 'papaya', basket).should.equal(100)
+      prices.threeForTwoAddition('papaya', basket).should.equal(100)
       
+    })
+
+    it('gives 0 if there are no items of the given type', () => {
+      prices.threeForTwoAddition('mango', basket).should.equal(0)
     })
 
   })
