@@ -7,9 +7,9 @@ describe('prices', () => {
           'banana',
           'apple',
           'papaya',
+          'papaya',
           'papaya'
         ]
-
 
   describe('simpleAddition', () => {
 
@@ -27,6 +27,19 @@ describe('prices', () => {
 
     it('gives 0 if there are no items of the given type', () => {
       prices.simpleAddition(priceList, 'mango', basket).should.equal(0)
+    })
+
+  })
+
+  describe('threeForTwoAddition', () => {
+
+    const priceList = {
+      papaya: 50
+    }
+
+    it('adds items of the same type, applying a 3x2 discount', () => {
+      prices.threeForTwoAddition(priceList, 'papaya', basket).should.equal(100)
+      
     })
 
   })
