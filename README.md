@@ -38,5 +38,5 @@ A [sample basket](https://github.com/lazywithclass/r3pi-exercise/blob/master/bas
 $ npm run generate
 ```
 
-will use that asn input and create a file named "receipt.html" at the root of 
+will use that as input and create a file named "receipt.html" at the root of 
 the project, open it with your preferred browser to see the receipt.
