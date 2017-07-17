@@ -10,28 +10,25 @@ describe('prices', () => {
           'papaya'
         ]
 
-  describe('for bananas', () => {
 
-    it('are calculated by adding all bananas in the basket', () => {
-      prices.bananas(basket).should.equal(30)
+  describe('simpleAddition', () => {
+
+    const priceList = {
+      apple: 25,
+      orange: 30,
+      banana: 15
+    }
+
+    it('adds items of the same type, given a price list', () => {
+      prices.simpleAddition(priceList, 'apple', basket).should.equal(25)
+      prices.simpleAddition(priceList, 'orange', basket).should.equal(30)
+      prices.simpleAddition(priceList, 'banana', basket).should.equal(30)
     })
 
-    it('gives 0 if there are no bananas', () => {
-      prices.bananas([]).should.equal(0)
+    it('gives 0 if there are no items of the given type', () => {
+      prices.simpleAddition(priceList, 'mango', basket).should.equal(0)
     })
 
-  });
-
-  describe('for apples', () => {
-
-    it('are calculated by adding all apples in the basket', () => {
-      prices.apples(basket).should.equal(25)
-    })
-
-    it('gives 0 if there are no apples', () => {
-      prices.apples([]).should.equal(0)
-    })
-
-  });
+  })
 
 });
