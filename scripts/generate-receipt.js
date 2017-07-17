@@ -4,6 +4,8 @@ const handlebars = require('handlebars'),
       prices = require('../lib/prices'),
       moment = require('moment')
 
+handlebars.registerHelper('formatPrice', (price) => price / 100);
+
 let compiled = handlebars.compile(template);
 let basket = require('../basket.json')
 
