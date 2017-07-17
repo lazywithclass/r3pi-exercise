@@ -22,4 +22,16 @@ describe('prices', () => {
 
   });
 
+  describe('for apples', () => {
+
+    it('are calculated by adding all apples in the basket', () => {
+      prices.apples(basket).should.equal(25)
+    })
+
+    it('gives 0 if there are no apples', () => {
+      prices.apples([]).should.equal(0)
+    })
+
+  });
+
 });
