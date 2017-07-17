@@ -37,4 +37,12 @@ describe('prices', () => {
 
   })
 
+  describe('basketAddition', () => {
+
+    it('calculates the price for all items in the basket', () => {
+      prices.basketAddition(basket).should.equal(25 + 30 + 30 + 100)
+    })
+
+  })
+
 });
