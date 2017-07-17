@@ -1,0 +1,16 @@
+{
+  "name": "r3pi-exercise",
+  "version": "1.0.0",
+  "description": "An exercise as first interview step",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/mocha --require should -w",
+    "test": "./node_modules/.bin/mocha --require should"
+  },
+  "author": "me@lazywithclass.com",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "should": "^11.2.1"
+  }
+}
