@@ -1,8 +1,10 @@
 ## R3pi exercise
 
-Develop a simple program that calculates the price of a shopping basket
+Develop a simple program that calculates the price of a shopping basket.
 
-Requirements:
+I've committed my work as units so you could see where I was going at each step, hope that helps with your decision.
+
+### Requirements
 
 * Items are presented one at a time, in a list, identified by name - for example
 "Apple" or "Banana".
