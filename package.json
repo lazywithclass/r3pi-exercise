@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "dev": "./node_modules/.bin/mocha --require should -w",
-    "test": "./node_modules/.bin/mocha --require should"
+    "test": "./node_modules/.bin/mocha --require should",
+    "generate": "node scripts/generate-receipt.js "
   },
   "author": "me@lazywithclass.com",
   "license": "ISC",
   "devDependencies": {
     "mocha": "^3.4.2",
     "should": "^11.2.1"
+  },
+  "dependencies": {
+    "handlebars": "^4.0.10",
+    "moment": "^2.18.1"
   }
 }
