@@ -32,7 +32,7 @@ $ npm test
 
 ### Generating the receipt
 
-A sample basket has been provided, running the following command 
+A [sample basket](https://github.com/lazywithclass/r3pi-exercise/blob/master/basket.json) has been provided, running the following command 
 
 ```bash
 $ npm run generate
